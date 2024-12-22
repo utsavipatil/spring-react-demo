@@ -2,7 +2,6 @@ package com.utsavi.spring_react_demo.common;
 
 import com.github.javafaker.Faker;
 import org.reactivestreams.Subscriber;
-import reactor.core.publisher.Mono;
 
 public class Util {
 
