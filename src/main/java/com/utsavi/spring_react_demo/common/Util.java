@@ -3,6 +3,8 @@ package com.utsavi.spring_react_demo.common;
 import com.github.javafaker.Faker;
 import org.reactivestreams.Subscriber;
 
+import java.time.Duration;
+
 public class Util {
 
     public static final Faker faker = Faker.instance();
@@ -13,12 +15,22 @@ public class Util {
     public static <T>Subscriber<T> subscriber(String name){
         return new DefaultSubscriber<T>(name);
     }
+
     public static Faker faker(){
         return faker;
     }
+
     public static void sleepSeconds(int seconds) {
         try {
             Thread.sleep(seconds * 1000L);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void sleep(Duration duration) {
+        try {
+            Thread.sleep(duration);
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
