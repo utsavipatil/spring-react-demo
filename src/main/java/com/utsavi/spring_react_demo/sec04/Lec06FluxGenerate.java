@@ -10,7 +10,7 @@ import reactor.core.publisher.Flux;
 * */
 
 /* Flux generate
-- involkes the given lambda expression again and again based on downstream demand
+- involves the given lambda expression again and again based on downstream demand
 - We can emit only one value at a time
 - will stop when complete method is invoked
 - will stop when error is invoked
