@@ -24,11 +24,11 @@ public class SubscriberImpl implements Subscriber<String> {
 
     @Override
     public void onError(Throwable throwable) {
-        log.error("error", throwable);
+        log.error("Error", throwable);
     }
 
     @Override
     public void onComplete() {
-        log.info("completed");
+        log.info("Completed");
     }
 }
